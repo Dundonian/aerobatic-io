@@ -9,7 +9,7 @@ _.templateSettings = {
 angular.module('services', []);
 angular.module('controllers', ['services']);
 angular.module('directives', ['services']);
-angular.module('aerobatic-io', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'duScroll', 
+angular.module('aerobatic-io', ['ngRoute', 'ngAnimate', 'duScroll', 
   'Aerobatic', 'services', 'controllers', 'directives', 'templates']);
 
 angular.module('aerobatic-io').config(function($routeProvider, $locationProvider, aerobaticProvider) {

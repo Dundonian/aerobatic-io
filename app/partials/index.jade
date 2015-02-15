@@ -1,27 +1,24 @@
 .page.clearfix.home(ng-controller="IndexCtrl")
   //- Hero banner
-  section#home
-    .container
+  section#home.color4.cta
+     .container
       .row.center
-        h1 Single page app hosting, built for front-end devs
-        h2 The <i>best</i> place to deploy AngularJS, Ember, and Backbone apps. <a href="#features" offset='150' class='learn-more' du-smooth-scroll>Learn more</a>.
-
+       .col-md-8
+         h1 The open-source web deployment platform for enterprises
+         h2 Fast and flexible for Developers. Secure and scalable for DevOps.
+       .col-md-4
+           img.img-responsive(asset-src="/images/aerobatic_web_terminal.png", alt="yoke-cli")
   section.color4.cta
     .ctaBox.ctaBoxFullwidth
       .container
-        //- .row
-        //-   .col-xs-12.center
-        //-     h2 LAUNCHING WINTER 2014
         .row
           .col-xs-12.center
             a.btn.getting-started(title='', href='/docs/getting-started')
               i.icon-flash
-              | Getting Started
-
-            a.btn(title='', href='https://portal.aerobaticapp.com/auth', target='blank')
-              i.icon-github-circled
-              | Signup for Beta
-
+              | Get Started For Free
+          .col-xs-12.center
+            br
+            * No credit card required
 
   section#services.slice.color1
     .container
@@ -141,8 +138,4 @@
           .col-xs-12.center
             a.btn.getting-started(title='', href='/docs/getting-started')
               i.icon-flash
-              | Getting Started
-
-            a.btn(title='', href='https://portal.aerobaticapp.com/auth', target='blank')
-              i.icon-github-circled
-              | Signup for Beta
+              | Get Started For Free

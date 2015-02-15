@@ -11,7 +11,6 @@ module.exports = function(grunt) {
           'dist/app.min.js': ['tmp/build.js', 'tmp/templates.js'],
           'dist/components.min.js': [
             'node_modules/underscore.string/lib/underscore.string.js',
-            'node_modules/angular-bootstrap/ui-bootstrap.js',
             'node_modules/angular-scroll/angular-scroll.js',
             'node_modules/angular-aerobatic/angular-aerobatic.js'
           ]
