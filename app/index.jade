@@ -31,7 +31,7 @@ html
       [ng-cloak]: { display: none }
 
     link(rel='stylesheet', href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css")
-    link(rel='stylesheet', href="//fonts.googleapis.com/css?family=Roboto:500,400,300")
+    link(rel='stylesheet', href="//fonts.googleapis.com/css?family=Dosis")
     //- Used for code highlighting in markdown
 
     link(rel='stylesheet', href="font/fontello-embedded.css")
@@ -105,7 +105,7 @@ html
 
           .col-xs-12(ng-class="showLeftMenu() ? 'col-md-9' : 'col-md-12'")
             .view-animate-container.rtl
-              div.view-animate(ng-view)
+              div.view-animate.ng-view()
 
       section#footerRights.clearfix
         .container

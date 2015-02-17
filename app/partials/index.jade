@@ -1,25 +1,34 @@
 .page.clearfix.home(ng-controller="IndexCtrl")
   //- Hero banner
-  section#home.color4.cta
-     .container
-      .row.center
-       .col-md-8
-         h1 The open-source web deployment platform for enterprises
-         h2 Fast and flexible for Developers. Secure and scalable for DevOps.
-       .col-md-4
-           img.img-responsive(asset-src="/images/aerobatic_web_terminal.png", alt="yoke-cli")
-  section.color4.cta
-    .ctaBox.ctaBoxFullwidth
-      .container
+  section.color4.cloud
+      .container.terminal
         .row
-          .col-xs-12.center
+          .col-md-1
+          .col-md-7
+            br
+            h1 The open-source web deployment platform for enterprises.
+          .col-md-4
+            br 
+            br 
+            .pre
+              > npm install -g yoke-cli
+              br
+              > yoke create-app
+              br
+              > yoke deploy
+        .row.center
+          .col-md-1
+          .col-md-6
+            h2 Fast & Flexible for Developers. Secure & Scalable for DevOps.
+            p
             a.btn.getting-started(title='', href='/docs/getting-started')
               i.icon-flash
               | Get Started For Free
-          .col-xs-12.center
             br
             * No credit card required
-
+            br
+            br
+          .col-md-5
   section#services.slice.color1
     .container
       .row
