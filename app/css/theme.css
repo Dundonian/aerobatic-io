@@ -186,7 +186,7 @@ body {
   line-height: 22px;
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-.png-adjust: 100%;
   margin: 0;
   padding: 0;
   padding-top: 88px;
@@ -1174,7 +1174,7 @@ p.credits a {
 .flexslider .flex-control-nav {
   background:transparent;
 }
-.flexslider h1 {
+.flexslider ctaBox {
   color:#fff;
   background-color:#0D73B3;
 }
@@ -1191,7 +1191,7 @@ p.credits a {
 #flexHome  h1 { color:#fff;
   background:none;
   }
-#flexHome  h2 { color:#fff;
+#flexHome  cta { color:#fff;
   background:none;
 }
 
@@ -1324,6 +1324,18 @@ border:none}
 }
 .color1 a.btn{color:#fff;}
 .color1 a.btn:hover{color:#0D73B3;}
+
+/*color2*/
+.color2, .slice.color2, .bulle.color2, .ctaBox.color2{
+  background-color:#454545;
+  color:#0D73B3;
+}
+
+.color2 h1, .color2 h2, .color2 h3, .color2 h4, .color2 blockquote, .color2 a{
+  color:#48C6F2;
+}
+.color2 a.btn{color:#fff;}
+.color2 a.btn:hover{color:#48C6F2;}
 
 /*color4*/
 .color4, .slice.color4, .bulle.color4, .ctaBox.color4{

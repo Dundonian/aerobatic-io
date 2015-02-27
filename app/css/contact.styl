@@ -1,0 +1,140 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css)
+
+$gray = #646d76
+$sans = "Raleway", sans-serif
+$formBG = #ddddde
+$legendBG = #5c8ab8
+body
+  font-family: $sans
+  background: #373737
+  color: #ebebeb
+.container
+  width: 20em
+  position: relative
+form
+  &.hidden
+    position: absolute
+    width: 20em
+    top: -100em
+    transform(scale(0.25))
+    transition(transform 0.5s ease-in, top 0.5s ease-in 0.4s)
+legend
+  background: $legendBG
+  color: white
+  padding: 1em 1.25em
+  font-size: 1.75em
+  border-radius: 0.2em 0.2em 0 0
+  position: relative
+  display: block
+  width: 100%
+  &:after
+    content: ""
+    position: absolute
+    width: 0
+    height: 0
+    border-style: solid
+    border-color: $legendBG transparent transparent
+    border-width: 0.4em
+    left: 2.2em
+    top: 100%
+fieldset
+  background: $formBG
+  width: 100%
+  padding: 1.75em 0 0.25em
+label
+  display: block
+  color: $gray
+  position: relative
+  margin: 0 2em 0.75em
+  transition(all 0.5s)
+  input, textarea
+    display: block
+    font-size: 1em
+    width: 100%
+    margin: 0.25em 0
+    padding: 0.5em 0.75em
+    border: none
+    background: lighten($gray, 55%)
+    border-radius: 0.2em
+    font-family: $sans
+    transition(all 0.5s)
+    &:focus
+      outline: none
+      box-shadow: 0 0 0.5em rgba(black, 0.2)
+      transition(all 0.5s)
+  textarea
+    min-height: 6em
+.form-controls
+  padding: 0.25em 2em 1.5em
+  background: $formBG
+  border-radius: 0 0 0.2em 0.2em
+  .btn
+    color: white
+    padding: 1em 0
+    border-radius: 0.25em
+    border: none
+    display: block
+    cursor: pointer
+    font-family: $sans
+  .btn-send
+    background: #60a531
+    width: 100%
+    font-size: 1.25em
+    opacity(1)
+    transition(all 0.5s)
+    &:hover
+      background: darken(#60a531, 5%)
+  [disabled]
+    opacity(0.5)
+    transition(all 0.5s)
+    cursor: default
+.required, .ok, .invalid,
+  transition(all 0.5s)
+  &:before
+    font-family: FontAwesome
+    font-weight: normal
+    font-style: normal
+    text-decoration: inherit
+    -webkit-font-smoothing: antialiased
+    padding: 0.2em
+    position: absolute
+    top: 0.1em
+    right: 0.1em
+    font-size: 1.5em
+    transition(all 0.5s)
+.required
+  &:before
+    content: "\f069"
+    //content:"\f111";
+    color: lighten(#dddddd, 7%)
+.invalid
+  &:before
+    content: "\f057"
+    //Function adjust-hue is not supported in Stylus
+    //color: rgba(adjust-hue(#60a531, 260), 0.5)
+.ok
+  &:before
+    content: "\f058"
+    color: #60a531
+    transition(transform 0.5s linear)
+    transform(rotate(360deg))
+.sent
+  opacity(1)
+  transition(all 0.5s ease-in-out 1s)
+  &.hidden
+    opacity(0)
+    position: absolute
+    z-index: -1
+  h1
+    font-size: 3em
+    text-align: center
+    small
+      font-size: 0.5em
+      font-weight: 400
+      display: block
+      text-align: right
+      margin-top: 0.5em
+.no-placeholder
+  display: none
+  .ie-lt9 &
+    display: block
