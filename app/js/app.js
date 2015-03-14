@@ -12,10 +12,16 @@ angular.module('directives', ['services']);
 angular.module('aerobatic-io', ['ngRoute', 'ngAnimate', 'duScroll', 
   'Aerobatic', 'services', 'controllers', 'directives', 'templates']);
 
-angular.module('aerobatic-io').config(function($routeProvider, $locationProvider, aerobaticProvider) {
+angular.module('aerobatic-io').config(function($routeProvider, $locationProvider, $sceDelegateProvider, aerobaticProvider) {
   // Use the bang prefix for Google ajax crawlability
   // https://developers.google.com/webmasters/ajax-crawling/docs/specification?csw=1
   $locationProvider.html5Mode(true);
+
+  $sceDelegateProvider.resourceUrlWhitelist([
+    //Allow same origin resource loads
+    'self',
+    location.protocol + aerobaticProvider.config.assetPath + '/**'
+  ]);
 
   function templateUrl(path) {
     if (aerobaticProvider.config.buildType === 'debug')
