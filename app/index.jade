@@ -15,18 +15,20 @@ html
         document.location = document.location.protocol + '//' + document.location.host + document.location.hash.substr(2);
       }
 
-    link(rel='apple-touch-icon-precomposed', sizes='114x114', href='favicons/apple-touch-icon-114x114-precomposed.png')
-    link(rel='apple-touch-icon-precomposed', sizes='120x120', href='favicons/apple-touch-icon-120x120-precomposed.png')
-    link(rel='apple-touch-icon-precomposed', sizes='144x144', href='favicons/apple-touch-icon-144x144-precomposed.png')
-    link(rel='apple-touch-icon-precomposed', sizes='152x152', href='favicons/apple-touch-icon-152x152-precomposed.png')
-    link(rel='apple-touch-icon-precomposed', sizes='60x60', href='favicons/apple-touch-icon-60x60-precomposed.png')
-    link(rel='apple-touch-icon-precomposed', sizes='72x72', href='favicons/apple-touch-icon-72x72-precomposed.png')
-    link(rel='apple-touch-icon-precomposed', sizes='76x76', href='favicons/apple-touch-icon-76x76-precomposed.png')
-    link(rel='icon', type='image/png', sizes='64x64', href='favicons/favicon.png')
-    meta(name='msapplication-square144x144logo', content='favicons/windows-tile-144x144.png')
-    meta(name='msapplication-square150x150logo', content='favicons/windows-tile-150x150.png')
-    meta(name='msapplication-square310x310logo', content='favicons/windows-tile-310x310.png')
-    meta(name='msapplication-square70x70logo', content='favicons/windows-tile-70x70.png')
+    link(rel='apple-touch-icon', sizes='57x57', href='/favicons/apple-touch-icon-57x57.png')
+    link(rel='apple-touch-icon', sizes='60x60', href='/favicons/apple-touch-icon-60x60.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='/favicons/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='76x76', href='/favicons/apple-touch-icon-76x76.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='/favicons/apple-touch-icon-114x114.png')
+    link(rel='apple-touch-icon', sizes='120x120', href='/favicons/apple-touch-icon-120x120.png')
+    link(rel='apple-touch-icon', sizes='144x144', href='/favicons/apple-touch-icon-144x144.png')
+    link(rel='apple-touch-icon', sizes='152x152', href='/favicons/apple-touch-icon-152x152.png')
+    link(rel='apple-touch-icon', sizes='180x180', href='/favicons/apple-touch-icon-180x180.png')
+    link(rel='icon', type='image/png', href='/favicons/favicon-32x32.png', sizes='32x32')
+    link(rel='icon', type='image/png', href='/favicons/android-chrome-192x192.png', sizes='192x192')
+    link(rel='icon', type='image/png', href='/favicons/favicon-96x96.png', sizes='96x96')
+    link(rel='icon', type='image/png', href='/favicons/favicon-16x16.png', sizes='16x16')
+
     style.
       [ng-cloak]: { display: none }
 
@@ -77,7 +79,7 @@ html
                   a(href="/contact")
                     | Contact
                 li(ng-show="mostRecentBlogPost", ng-class="{current:navSelected('/blog')}")
-                  a(ng-href='{{mostRecentBlogPost}}')
+                  a(ng-href='/blog/{{mostRecentBlogPost}}')
                     | Blog
                 li
                   a(href='https://portal.aerobaticapp.com/auth', target="_self")
@@ -87,21 +89,17 @@ html
         .row
           .col-md-3.visible-md.visible-lg.left-menu(ng-class="{none:!showLeftMenu()}")
             div.toc(ng-show="showDocsMenu()")
-              ul
-                li(ng-repeat="article in ::contentIndex.docs")
-                  a(ng-href="/docs/{{::article.url}}", ng-class="{active:isActiveToc('/docs/' + article.url)}") {{article.title}}
+              a(ng-repeat="article in ::contentIndex.docs", ng-href="/docs/{{::article.url}}", ng-class="{active:isActiveToc('/docs/' + article.url)}") {{article.title}}
 
-            div.toc.well(ng-show="showBlogMenu()")
-              ul
-                li(ng-repeat="post in ::contentIndex.blogPosts")
-                  a(ng-href="/blog/{{::post.url}}", ng-class="{active:isActiveToc('/blog/' + post.url)}") {{post.title}}
+            div.toc(ng-show="showBlogMenu()")
+              a(ng-repeat="post in ::contentIndex.blogPosts", ng-href="/blog/{{::post.url}}", ng-class="{active:isActiveToc('/blog/' + post.url)}") {{post.title}}
 
           .col-xs-12(ng-class="showLeftMenu() ? 'col-md-9' : 'col-md-12'")
             .view-animate-container.rtl
               div.view-animate.ng-view()
 
       section.footer
-        .container.container-narrow
+        .container
           .row
             .col-sm-6
               p

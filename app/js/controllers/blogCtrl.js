@@ -23,7 +23,10 @@ angular.module('controllers').controller('BlogCtrl', function($scope, $rootScope
     // If the route has all 4 parts yyyy/mm/dd/title then render the actual post
     else {
       // Load the content and write it to the page
-      var blogPost = _.find(contentIndex.blogPosts, {urlPath: $location.path()});
+      var blogPost = _.find(contentIndex.blogPosts, function(post) {
+        return '/blog/' + post.url === $location.path();
+      });
+
       if (!blogPost)
         return $location.path('404');
 
@@ -31,7 +34,7 @@ angular.module('controllers').controller('BlogCtrl', function($scope, $rootScope
       $document[0].title = blogPost.title + ' | Aerobatic';
 
       $scope.blogPost = blogPost;
-      content.load(blogPost).then(function(content) {
+      content.load('blog/' + blogPost.url + '.md').then(function(content) {
         $scope.content = $sce.trustAsHtml(content);
       });
     }

@@ -109,12 +109,12 @@ ul.navbar-nav
     
 // Homepage banner
 .banner
-  padding-top: 40px
-  padding-bottom: 40px
+  padding-bottom: 25px
   background-color: $primaryBackground
   color: #FFF
   
   h1 
+    padding-top: 20px
     font-size: 36px
     font-weight: 400
     font-family: $primaryHeadingFont
@@ -207,24 +207,21 @@ section.footer
 // The left column table of contents
 .toc
   margin-top: 20px
-  // position: fixed
-  width: 200px
-
-  ul
-    padding: 5px
-    list-style-type: none;    
-    
-  li 
-    line-height: 1.9
 
   a
+    display: block
     color: $accentLightBlue
     text-decoration: none
     font-weight: 400
-    
-  a.active
+    margin-bottom: 10px
+  
+  a.active, a.active:hover
     color: $softBlack
     font-weight: 500
+      
+  a:hover
+    color: $primaryBackground
+  
 
 .view-animate-container
   min-height: 500px
