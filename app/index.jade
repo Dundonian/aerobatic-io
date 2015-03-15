@@ -37,6 +37,7 @@ html
     link(rel='stylesheet', href="font/fontello-embedded.css")
     //- link(rel='stylesheet', data-aero-build="debug", href='css/theme.css')
     link(rel='stylesheet', data-aero-build="debug", href='css/custom.styl.css')
+    link(rel='stylesheet', data-aero-build="debug", href="css/github-markdown.css")
     link(rel='stylesheet', data-aero-build="release", href='css/app.min.css')
 
   body(ng-app='aerobatic-io')
@@ -85,17 +86,15 @@ html
       div(ng-class="{container:showLeftMenu()}")
         .row
           .col-md-3.visible-md.visible-lg.left-menu(ng-class="{none:!showLeftMenu()}")
-            div.toc.well(ng-show="showDocsMenu()")
-              h3 Table of Contents
-              ul(ng-cloak)
+            div.toc(ng-show="showDocsMenu()")
+              ul
                 li(ng-repeat="article in ::contentIndex.docs")
-                  a(ng-href="docs/{{::article.url}}", ng-class="{active:isActiveToc(article)}") {{article.title}}
+                  a(ng-href="/docs/{{::article.url}}", ng-class="{active:isActiveToc('/docs/' + article.url)}") {{article.title}}
 
             div.toc.well(ng-show="showBlogMenu()")
-              h3 Blog Posts
-              ul(ng-cloak)
+              ul
                 li(ng-repeat="post in ::contentIndex.blogPosts")
-                  a(ng-href="blog/{{::post.url}}", ng-class="{active:isActiveToc(post)}") {{post.title}}
+                  a(ng-href="/blog/{{::post.url}}", ng-class="{active:isActiveToc('/blog/' + post.url)}") {{post.title}}
 
           .col-xs-12(ng-class="showLeftMenu() ? 'col-md-9' : 'col-md-12'")
             .view-animate-container.rtl

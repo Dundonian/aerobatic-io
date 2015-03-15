@@ -142,6 +142,20 @@ ul.navbar-nav
   img.terminal
     max-width: 400px
 
+
+a.btn.btn-fancy
+  border: solid 2px $accentLightBlue
+  border-radius: 6px
+  text-transform: uppercase
+  background-color: $primaryBackground
+  color: #FFF
+  font-family: $primaryHeadingFont
+  font-size: 20px
+  font-weight: 200
+  
+a.btn.btn-fancy:hover 
+  background-color: $accentLightBlue
+
 .banner.banner-bottom
   margin-top: 25px
   padding-top: 15px
@@ -198,22 +212,24 @@ section.footer
 
   ul
     padding: 5px
-    list-style-position:outside;
+    list-style-type: none;    
+    
+  li 
+    line-height: 1.9
 
-  a.active
-    color: #48C6F2
+  a
+    color: $accentLightBlue
     text-decoration: none
+    font-weight: 400
+    
+  a.active
+    color: $softBlack
     font-weight: 500
 
 .view-animate-container
   min-height: 500px
   position:relative;
   overflow-x:hidden
-
-  // height:100%;
-  // overflow: hidden
-  // overflow-y:scroll;
-  // overflow-x:hidden
 
 // Animation styles based on example here:
 // http://embed.plnkr.co/p7WZdsy0FznV3zo7VWjU/style.css
@@ -320,9 +336,12 @@ button.blog-share.hackernews
 
 ul.pricing
   .header
-    text-align: center
-    background-color: #0D73B3
+    background-color: $primaryBackground
     color: #F8F8F8
+    
+    .h4
+      font-family: $primaryHeadingFont
+      font-weight: 400
 
 // terminal text
 p.yoke

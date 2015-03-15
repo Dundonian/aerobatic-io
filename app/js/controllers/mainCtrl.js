@@ -22,8 +22,8 @@ angular.module('controllers').controller('MainCtrl', function($scope, $location,
   // http://plnkr.co/edit/OlCCnbGlYWeO7Nxwfj5G?p=preview
   $scope.navCollapsed = true;
 
-  $scope.isActiveToc = function(content) {
-    return $location.path() == content.url;
+  $scope.isActiveToc = function(contentUrl) {
+    return $location.path() == contentUrl;
   };
 
   $scope.toggleNav = function() {
