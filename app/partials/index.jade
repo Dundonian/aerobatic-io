@@ -1,99 +1,79 @@
 .page.clearfix.home(ng-controller="IndexCtrl")
   //- Hero banner
-  section.color4.cloud
-      .container.terminal
-        .row.center
-          .col-md-1
-          .col-md-7
-            br
-            h1 Web app deployment for enterprises.
-            h2 Fast & Flexible for Developers. Secure & Scalable for DevOps.
-            p
-            a.btn.getting-started(title='', href='/docs/getting-started')
-              i.icon-flash
-              | Install Aerobatic
-            h3
-          .col-md-4
+  section.banner.banner-top
+    .container.container-narrow
+      .row
+        .col-md-6.col-sm-12.col-xs-12
+          h1 Web app deployment for enterprises.
+          h2 Fast &amp; Flexible for Developers. 
+          h2 Secure &amp; Scalable for DevOps.
+          p
+          a.btn.getting-started(title='', href='/docs/getting-started')
+            i.icon-flash
+            | Install Aerobatic
+          h3
+        .col-md-6.hidden-sm.hidden-xs
+          div.pull-right
+            img.img-responsive.terminal(asset-src="images/terminal-combined.png")
+
 
   //-  features
-  section#boxFeatures.slice.color1
-    a#features(du-smooth-scroll)
-    .container
+  section.home-features
+    .container.container-narrow
+      .row
+        .col-md-6.col-sm-12
+          h2 
+            i.icon-window 
+            span Built for modern web apps
+
+          p Designed from the ground-up for today's web apps. Everything a front-end developer needs, including <b>SEO</b>, <b>command line deployment</b>, <b>API key</b> management, and more come right out of the box.
+
+        .col-md-6
+          h2
+            i.icon-terminal
+            span Developer friendly tooling
+          p Our <a href="/docs/yoke">yoke</a> command line utility integrates cleanly into a streamlined modern workflow. Deploy a new version to production with just a few keystrokes. Wire up to your CI server for <b>continuous delivery</b>.
+      
       .row
         .col-sm-6
-          .row.boxFeature
-            .col-xs-3
-              i.icon-window.iconBig
-            .col-xs-9
-              h2 Built for modern web apps
-              p
-               | Designed from the ground-up for today's web apps. Everything a front-end developer needs, including <b>SEO</b>, <b>command line deployment</b>, <b>API key</b> management, and more come right out of the box.
+          h2 
+            i.icon-users-outline
+            span Work as a Team
+          p Aerobatic Organizations makes it easy for enterprise teams to collaborate and build apps together. Manage all your apps in one place. <b>Share common APIs</b> and configuration across multiple apps.
 
         .col-sm-6
-          .row.boxFeature
-            .col-xs-3
-              i.icon-terminal.iconBig
-            .col-xs-9
-              h2 Developer friendly tooling
-              p
-               | <b>Grunt</b> and <b>Gulp</b> plugins that integrate cleanly into a streamlined modern workflow. Deploy a new version to production with just a few keystrokes. Wire up to your CI server for <b>continuous delivery</b>.
+          h2
+            i.icon-lock-empty
+            span Built-in Security
+          p Access controls and policy management with Active Directory and more. Authenticate users with <b>OAuth</b>. Enforce <b>SSL</b> with the click of a box. Keep <b>sensitive keys</b> on the server and out of your JavaScript.
+      
       .row
         .col-sm-6
-          .row.boxFeature
-            .col-xs-3
-              i.icon-users-outline.iconBig
-            .col-xs-9
-              h2 Work as a Team
-              p
-               | Aerobatic Organizations makes it easy for enterprise teams to collaborate and build apps together. Manage all your apps in one place. <b>Share common APIs</b> and configuration across multiple apps.
+          h2 
+            i.icon-cloud-flash
+            span Optimized for performance
+          p Auto-Scaling &amp; Performance Monitoring [more text goes here].
 
         .col-sm-6
-          .row.boxFeature
-            .col-xs-3
-              i.icon-lock-empty.iconBig
-            .col-xs-9
-              h2 Built-in Security
-              p
-               | Access controls and policy management with Active Directory and more. Authenticate users with <b>OAuth</b>. Enforce <b>SSL</b> with the click of a box. Keep <b>sensitive keys</b> on the server and out of your JavaScript.
-      .row
-        .col-sm-6
-          .row.boxFeature
-            .col-xs-3
-              i.icon-cloud-flash.iconBig
-            .col-xs-9
-              h2 Optimized for performance
-              p
-               | Auto-Scaling & Performance Monitoring [more text goes here].
+          h2 
+            i.icon-shuffle
+            span Blue / Green Deployments
+          p Split traffic between multiple versions of your app with a simple slider and monitor the results in real-time. Or, mitigate risk by soft launching new versions to a small portion of users.
 
-        .col-sm-6
-          .row.boxFeature
-            .col-xs-3
-              i.icon-shuffle.iconBig
-            .col-xs-9
-              h2 Blue / Green Deployments
-              p
-               | Split traffic between multiple versions of your app with a simple slider and monitor the results in real-time. Or, mitigate risk by soft launching new versions to a small portion of users.
       .row
         .col-sm-6
-          .row.boxFeature
-            .col-xs-3
-              i.icon-block.iconBig
-            .col-xs-9
-              h2 Integrated Environments
-              p
-               | With Aerobatic’s simulator mode, run your front-end changes locally, and the rest of your app in the cloud. Test changes in a fully integrated environment that exactly <b>emulates production</b>. Let stakeholders <b>preview and approve</b> new versions via private URL before flipping the switch to release into the wild.
-               
-  section.color4.cta
-    .ctaBox.ctaBoxFullwidth
-      .container
-        .row
-          h1.center The Dev Ops you Never Knew You Had
-          h2.center Not a huge enterprise? No problem. Deploy to our cloud in less than 60 seconds!
-          h3 CDN, Custom Domains (inc. SSL), SEO, API proxy, oAuth, and more. 
-        .row
-          .col-xs-12.center
-            a.btn.getting-started(title='', href='/docs/getting-started')
-              i.icon-flash
-              | Get Started For Free
+          h2
+            i.icon-block
+            span Integrated Environments
+          p With Aerobatic’s simulator mode, run your front-end changes locally, and the rest of your app in the cloud. Test changes in a fully integrated environment that exactly <b>emulates production</b>. Let stakeholders <b>preview and approve</b> new versions via private URL before flipping the switch to release into the wild.
+  
+  section.banner.banner-bottom
+    .container.container-narrow
+      h1 The DevOps you Never Knew You Had
+      h2 Not a huge enterprise? No problem. Deploy to our cloud in less than 60 seconds!
+      h2 CDN, custom domains (inc. SSL), SEO, API proxy, OAuth, and more.
+      a.btn.getting-started(title='', href='/docs/getting-started')
+        i.icon-flash
+        | Get Started For Free
 
 

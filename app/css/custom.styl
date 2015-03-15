@@ -2,13 +2,20 @@
 @import 'nib'
 @require 'gallery'
 
+$primaryBackground = rgb(13, 115, 179)
+$accentLightBlue = rgb(72, 198, 242)
+$secondaryBackground = rgb(248, 248, 248)
+$softBlack = rgb(69, 69, 69)
+$primaryHeadingFont = 'Dosis', sans-serif
+
 body
   overflow-x: hidden
   overflow-y: scroll
   width: 100%
   height: 100%
-  color: #454545
+  color: $softBlack
   font-family: 'Helvetica Neue', sans-serif
+  font-size: 15px
   
 b, strong
   font-weight: 400
@@ -25,38 +32,168 @@ a::-moz-focus-inner
 ::-moz-focus-inner
   border:0
 
-h1
-  text-align: left
-  text-transform: none
-  position: relative
-  letter-spacing: inherit
+.page.content
+  padding-bottom: 20px
+  
+  h1
+    text-decoration: none
+    text-transform: none
+    text-align: left
+    font-size: 30px
+    line-height: 35px
+    font-family: $primaryHeadingFont !important
+    font-weight: 400 !important
+    font-size: 35px 
+    
+  h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6
+    font-family: "Helvetica Neue"
+    font-weight: 200
+    line-height: 1.1
+    
+  h2 
+    font-size: 25px
+    
+  p
+    line-height: 1.6
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
-  font-family: 'Dosis', sans-serif
-  font-weight: 400
-  line-height: 1.1
+@media(min-width: 1200px)
+  .container.container-narrow
+    width: 1050px
+  
+header
+  background-color: $primaryBackground
+
+.navbar 
+  border-radius: 0
+  border: none
+  margin: 0
+  height: 70px;
+  
+ul.nav.navbar-nav
+  margin: 0px
 
 a.navbar-brand
   padding-top: 10px
 
   img
-    height:70px
+    height:50px
 
-.navbar-default .navbar-nav>li>a
-    color: #48C6F2
+.navbar .navbar-nav>li>a
+  color: $accentLightBlue
+  text-transform: uppercase
+  font-family: $primaryHeadingFont
+  font-size: 18px
+  border: solid 1px transparent
+  border-radius: 4px
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 10px
+  margin-left: 5px
+  
+.navbar .navbar-nav>li>a:hover
+  border: solid 1px $accentLightBlue
+  background-color: $primaryBackground
 
+.navbar .navbar-nav>li>a:focus 
+  background: $primaryBackground
+  
+.navbar .navbar-nav>li>a:active
+  background: $primaryBackground
+
+.navbar .navbar-nav>li.current>a
+  color: #FFF
+  
 ul.navbar-nav
   li.current *
     color: #F8F8F8
+    
+// Homepage banner
+.banner
+  padding-top: 40px
+  padding-bottom: 40px
+  background-color: $primaryBackground
+  color: #FFF
+  
+  h1 
+    font-size: 36px
+    font-weight: 400
+    font-family: $primaryHeadingFont
+    
+  h2 
+    margin: 0
+    line-height: 1.5
+    font-size: 26px
+    font-weight: 100
+    font-family: $primaryHeadingFont
+    
+  a.btn
+    margin-top: 20px
+    border: solid 2px $accentLightBlue
+    border-radius: 6px
+    text-transform: uppercase
+    color: #FFF
+    font-family: $primaryHeadingFont
+    font-size: 20px
+    font-weight: 200
+    
+  a.btn:hover
+    background-color: $accentLightBlue
+    
+  img.terminal
+    max-width: 400px
 
-.left-menu
-  z-index: 1000
-  position: relative
+.banner.banner-bottom
+  margin-top: 25px
+  padding-top: 15px
+  padding-bottom: 30px
+
+// only show the cloud background on big screens
+@media(min-width: 900px)
+  .banner.banner-top 
+    background-image: url(../images/aerobatic_web_cloud.png)
+    background-position: bottom right
+    background-repeat: no-repeat   
+
+
+section.home-features
+  margin-top: 20px
+  
+  h2
+    font-size: 25px
+    font-weight: 200
+    
+  h2 > span 
+    margin-left: 5px
+    
+  p 
+    line-height: 1.7
+    margin-right: 10px
+    
+section.footer
+  background-color: $primaryBackground
+  color: #FFF
+  padding-top: 10px
+  padding-bottom: 20px
+  font-weight: 200
+
+  a 
+    color: #FFF
+  a:hover
+    color: #FFF 
+      
+  .icons 
+    i 
+      color: #FFF
+      font-size: 25px
+
+// .left-menu
+//   z-index: 1000
+//   position: relative
 
 // The left column table of contents
 .toc
   margin-top: 20px
-  position: fixed
+  // position: fixed
   width: 200px
 
   ul
@@ -110,11 +247,6 @@ ul.navbar-nav
 .ltr .view-animate.ng-leave.ng-leave-active
   transform: translate3d(100%, 0, 0);
 
-// .tb .view-animate.gn-leave.ng-leave-active
-@media (min-width: 992px)
-  .ctaBox a
-    float: none
-
 .page
   width: 100%
 
@@ -122,115 +254,9 @@ ul.navbar-nav
   font-size: 22px
   padding-top: 8px
 
-.slice
-  padding: 35px 0
-
 a#features
   display: block
   padding-top: 25px
-
-section#boxFeatures
-  padding-top: 25px
-
-#home
-  h1
-    text-align: center
-    font-size: 42px
-    line-height: 50px
-    font-weight: 300
-
-  h2
-    color: #454545
-    font-size: 26px
-    line-height: 36px
-    font-weight: 300
-
-    i
-      color: #454545
-      text-decoration: none
-      font-style: normal
-      font-weight: 400
-
-  h3
-    line-height: 30px;
-
-  a.learn-more
-    color: #FFF
-    cursor: pointer
-    border-bottom: 1px dotted #ffffff
-
-  a.learn-more:hover
-    color:#FFF
-    text-decoration: none
-
-a.btn.getting-started
-  margin-right: 15px
-
-.launch-signup
-  input[type='text']
-    width: 300px
-    margin-right: 15px
-    display: inline-block
-
-  button.btn[type=submit]
-    padding: 9px 20px
-
-@media (max-width: 1024px)
-  .launch-signup
-    margin-top: 20px
-
-@media (max-width: 768px)
-  #home
-    padding: 30px
-
-    h1
-      font-size: 36px
-      line-height: 45px
-      font-weight: 300
-
-    h2
-      font-size: 24px
-      line-height: 31px
-
-
-  .launch-signup
-    margin-top: 20px
-
-    input[type="text"]
-      width: 240px
-
-// Features
-.boxFeature
-  h2
-    font-size: 34px
-    font-weight: 300
-    line-height: 38px
-
-  .col-xs-2
-    text-align: center
-
-section.page
-  padding-top: 20px
-
-.center
-  text-align: center
-
-h2.subTitle
-  line-height: 32px
-
-// Mobile screen style overrides
-@media (max-width: 764px)
-  body
-    padding-top: 65px
-
-  h1
-    font-size: 30px
-    line-height: 30px
-    margin-bottom: 15px
-
-  a.navbar-brand
-    img
-      height: 50px
 
 .markdown
   h2
@@ -255,34 +281,13 @@ h2.subTitle
     text-decoration: none;
     content: '\e833'
     margin-left: 2px
-    font-size: .7em
-
-.page.content
-  h1
-    text-decoration: none
-    text-transform: none
-    text-align: left
-    font-size: 30px
-    line-height: 35px
-    font-weight: 300
-    font-style: normal
+    font-size: .7em    
 
 .blog-date
   font-size: 20px
   font-weight: 300
   line-height: 20px
   font-family: 'Dosis',sans-serif
-
-// Fix for the signup and getting started buttons
-// overlapping at medium screen sizes
-@media (min-width: 1200px)
-  .ctaBox a.btn-lg
-    font-size: 22px !important
-
-@media (max-width: 1200px)
-  .ctaBox a.btn-lg
-    font-size: 16px !important
-
 
 // Blog share buttons
 button.blog-share
@@ -319,46 +324,6 @@ ul.pricing
     background-color: #0D73B3
     color: #F8F8F8
 
-  // .center
-  //   text-align: center
-
-.cloud
-  background-image url(../images/aerobatic_web_cloud.png)  
-  background-repeat no-repeat
-  background-size 25%
-  background-position right bottom
-
-.terminal
-  background-image url(../images/terminal-combined.png)  
-  background-repeat no-repeat
-  background-size 28%
-  background-position right center
-
-// cta
-.ctaBox
-  h1
-    font-size: 44px;
-    line-height: 44px;
-    font-weight: 300;
-    font-style: normal;
-    text-align:center;
-    position:relative;
-    margin-bottom: 17px;
-  h2
-    font-size:24px;
-    line-height: 24px;
-    font-weight: 300;
-    font-style: normal;
-    padding:0;
-    margin-bottom:17px;
-  h3
-    font-size:20px;
-    line-height: 20px;
-    font-weight: 300;
-    font-style: normal;
-    padding:0px;
-    text-align:center;
-
 // terminal text
 p.yoke
     font-size: 20px;
@@ -378,3 +343,6 @@ a.4front
   color: #48C6F2
   text-decoration: none
   font-weight: 500
+  
+.none
+  display: none !important
