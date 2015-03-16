@@ -30,7 +30,7 @@ html
     link(rel='icon', type='image/png', href='/favicons/favicon-16x16.png', sizes='16x16')
 
     style.
-      [ng-cloak]: { display: none }
+      [ng-cloak], .ng-cloak: { display: none }
 
     link(rel='stylesheet', href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css")
     link(rel='stylesheet', href="//fonts.googleapis.com/css?family=Dosis:100,200,300,400,500")
@@ -47,43 +47,60 @@ html
       //- header
       header#mainHeader.navbar(role='banner')
         .container
-          nav.navbar(role='navigation')
-            .navbar-header
-              button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse', ng-init="navCollapsed = true", ng-click="navCollapsed = !navCollapsed")
-                span.sr-only Toggle navigation1
-                span.icon-bar
-                span.icon-bar
-                span.icon-bar
+          .row
+            .col-md-3
               a.navbar-brand(href='/')
                 img(src='images/aerobatic_logo_01.png', alt='Aerobatic')
-                span {{location.path()}}
+            .col-md-9
+              .pull-right
+                ul.nav.navbar-nav.pull-right.hidden-sm.hidden-xs
+                  li(ng-class="{current:navSelected('/docs')}")
+                    a(href='/docs/introduction')
+                      | Docs
 
-            .collapse.navbar-collapse.navbar-ex1-collapse(ng-class="!navCollapsed && 'in'", ng-click="navCollapsed=true")
-              ul.nav.navbar-nav.pull-right
-                li(ng-class="{current:navSelected('/docs')}")
-                  a(href='/docs/introduction')
-                    | Docs
+                  li(ng-class="{current:navSelected('/pricing')}")
+                    a(href='/pricing')
+                      | Pricing
 
-                li(ng-class="{current:navSelected('/pricing')}")
-                  a(href='/pricing')
-                    | Pricing
+                  li(ng-class="{current:navSelected('/gallery')}")
+                    a(href='/gallery')
+                      | Gallery
+                  li(ng-class="{current:navSelected('/contact')}")
+                    a(href="/contact")
+                      | Contact
+                  li(ng-show="mostRecentBlogPost", ng-class="{current:navSelected('/blog')}")
+                    a(ng-href='/blog/{{mostRecentBlogPost}}')
+                      | Blog
+                  li
+                    a(href='https://portal.aerobaticapp.com/auth', target="_self")
+                      | Login  
 
-                li(ng-class="{current:navSelected('/gallery')}")
-                  a(href='/gallery')
-                    | Gallery
-                //- li(ng-class="{current:navSelected('/about')}")
-                //-   a(href='/about')
-                //-     i.icon-info-circled
-                //-     | About
-                li(ng-class="{current:navSelected('/contact')}")
-                  a(href="/contact")
-                    | Contact
-                li(ng-show="mostRecentBlogPost", ng-class="{current:navSelected('/blog')}")
-                  a(ng-href='/blog/{{mostRecentBlogPost}}')
-                    | Blog
-                li
-                  a(href='https://portal.aerobaticapp.com/auth', target="_self")
-                    | Login
+                button.navbar-toggle.hidden-lg.hidden-md.hidden-xl(type='button', ng-init="navCollapsed = true", ng-click="navCollapsed = !navCollapsed")
+                  span.sr-only Toggle navigation1
+                  span.icon-bar
+                  span.icon-bar
+                  span.icon-bar
+
+      ul.mobile-menu(ng-hide="navCollapsed", ng-cloak)
+        li
+          a(href='/docs/introduction', ng-click="navCollapsed=true")
+            | Docs
+        li(ng-click="navCollapsed=true")
+          a(href='/pricing')
+            | Pricing
+        li(ng-click="navCollapsed=true")
+          a(href='/gallery')
+            | Gallery
+        li(ng-click="navCollapsed=true")
+          a(href="/contact")
+            | Contact
+        li(ng-show="mostRecentBlogPost", ng-click="navCollapsed=true")
+          a(ng-href='/blog/{{mostRecentBlogPost}}')
+            | Blog
+        li
+          a(href='https://portal.aerobaticapp.com/auth', target="_self")
+            | Login          
+                
 
       div(ng-class="{container:showLeftMenu()}")
         .row
@@ -101,18 +118,18 @@ html
       section.footer
         .container
           .row
-            .col-sm-6
+            .col-xs-9
               p
                 | Copyright ©&nbsp;
                 script(type='text/javascript').
                   document.write(new Date().getFullYear());
                 a(href='http://www.aerobatic.com') &nbsp;Aerobatic LLC
                 | &nbsp;All rights reserved.
-            .col-sm-6
+            .col-xs-3
               .pull-right.icons
                 a(href='https://twitter.com/aerobaticapp', title='follow me on Twitter', target='_blank')
                   i.icon-twitter
-                a(href='https://github.com/aerobatic', title='check us out on GitHub', target='_blank')
+                a.hidden-xs(href='https://github.com/aerobatic', title='check us out on GitHub', target='_blank')
                   i.icon-github-circled
 
 
@@ -140,14 +157,4 @@ html
     //- Load our partial views that have been compiled to JavaScript
 
     div(data-aero-build="debug")
-      //- script(src="tmp/templates.js")
-      script(src="js/app.js")
-      script(src="js/controllers/indexCtrl.js")
-      script(src="js/controllers/mainCtrl.js")
-      script(src="js/controllers/docsCtrl.js")
-      script(src="js/controllers/blogCtrl.js")
-      script(src="js/services/analytics.js")
-      script(src="js/services/content.js")
-      script(src="js/directives.js")
-      script(src="js/directives/blogShare.js")
-      script(src="js/directives/blogAuthor.js")
+      script(data-aero-src="js/**/*.js")

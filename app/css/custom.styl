@@ -8,6 +8,14 @@ $secondaryBackground = rgb(248, 248, 248)
 $softBlack = rgb(69, 69, 69)
 $primaryHeadingFont = 'Dosis', sans-serif
 
+html
+  position: relative;
+  min-height: 100%;
+
+body
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+
 body
   overflow-x: hidden
   overflow-y: scroll
@@ -62,21 +70,62 @@ a::-moz-focus-inner
   
 header
   background-color: $primaryBackground
+  padding: 10px 0
 
 .navbar 
   border-radius: 0
   border: none
   margin: 0
-  height: 70px;
+  height: 70px
+
+a.navbar-brand
+  padding: 0
+  img
+    height:50px
+
+@media(max-width:768px)
+  .navbar 
+    height: 60px
+    
+  a.navbar-brand img
+    height: 40px
   
 ul.nav.navbar-nav
   margin: 0px
 
-a.navbar-brand
-  padding-top: 10px
+.navbar-collapse
+  display: none
 
-  img
-    height:50px
+.navbar-toggle 
+  display: block
+  margin-top: 0
+  color: $accentLightBlue
+      
+.mobile-menu
+  padding: 15px
+  list-style-type: none
+  position: absolute
+  top: 70px
+  z-index: 10000
+  background-color: #FFF 
+  width: 100%
+  border-bottom: solid 1px $primaryBackground
+  
+  li 
+    margin: 10px 0
+    font-family: $primaryHeadingFont
+    font-size: 20px
+    
+  li a 
+    display: block
+
+button.navbar-toggle
+  cursor: pointer
+  margin-right: 0
+  border: solid 2px $accentLightBlue
+
+  .icon-bar
+    background-color: $accentLightBlue
 
 .navbar .navbar-nav>li>a
   color: $accentLightBlue
@@ -128,24 +177,40 @@ ul.navbar-nav
     
   a.btn
     margin-top: 20px
-    border: solid 2px $accentLightBlue
-    border-radius: 6px
-    text-transform: uppercase
-    color: #FFF
-    font-family: $primaryHeadingFont
-    font-size: 20px
-    font-weight: 200
     
   a.btn:hover
     background-color: $accentLightBlue
     
-  img.terminal
-    max-width: 400px
+  div.terminal-wrap
+    width: 400px
+    height: 276px
+    position: relative
+    
+    div.terminal-bg
+      background-color: #000
+      opacity: .3
+      border-radius: 20px 
+      z-index: 10
+      position: absolute
+      top: 30px
+      bottom: 0
+      left: 0
+      right: 0
+    
+    img.terminal
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 1000
 
 
 a.btn.btn-fancy
   border: solid 2px $accentLightBlue
-  border-radius: 6px
+  text-align: center
+  border-radius: 10px
+  padding: 8px 20px
   text-transform: uppercase
   background-color: $primaryBackground
   color: #FFF
@@ -186,9 +251,12 @@ section.home-features
 section.footer
   background-color: $primaryBackground
   color: #FFF
-  padding-top: 10px
-  padding-bottom: 20px
+  padding-top: 15px
   font-weight: 200
+  height: 60px
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 
   a 
     color: #FFF
