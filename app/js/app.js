@@ -32,8 +32,8 @@ angular.module('aerobatic-io').config(function($routeProvider, $locationProvider
 
   $routeProvider
     .when('/', {
-      controller: 'IndexCtrl',
-      templateUrl: templateUrl('partials/index.jade')
+      controller: 'HomeCtrl',
+      templateUrl: templateUrl('partials/home.jade')
     })
     .when('/docs/:article?', { 
       controller: 'DocsCtrl',
@@ -43,11 +43,14 @@ angular.module('aerobatic-io').config(function($routeProvider, $locationProvider
       templateUrl: templateUrl('partials/blog.jade'),
       controller: 'BlogCtrl'
     })
+    .when('/features', {
+      templateUrl: templateUrl('partials/features.jade')
+    })
     .when('/contact', {
       templateUrl: templateUrl('partials/contact.jade') 
     })
     .when('/pricing', {
-      templateUrl: templateUrl('partials/pricing.jade') 
+      templateUrl: templateUrl('partials/pricing.jade')
     })
     .when('/gallery', {
       templateUrl: templateUrl('partials/gallery.jade')

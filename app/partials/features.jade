@@ -1,27 +1,8 @@
-.page.clearfix.home(ng-controller="IndexCtrl")
-  //- Hero banner
-  section.banner.banner-top
-    .container.container-narrow
-      .row
-        .col-md-6.col-sm-12.col-xs-12
-          h1 Web app deployment for enterprises.
-          h2 Fast &amp; Flexible for Developers. 
-          h2 Secure &amp; Scalable for DevOps.
-          p
-          a.btn.btn-fancy(title='', href='/docs/getting-started')
-            i.icon-flash
-            | Install Aerobatic
-          h3
-        .col-md-6.hidden-sm.hidden-xs
-          div.pull-right
-            .terminal-wrap
-              .terminal-bg
-              img.img-responsive.terminal(asset-src="images/terminal-combined.png")
-
-
-  //-  features
-  section.home-features
-    .container.container-narrow
+.view
+  section.page.content(ng-cloak)
+    .container
+      h1 Features
+      
       .row
         .col-sm-6
           h2 
@@ -69,13 +50,4 @@
             span Integrated Environments
           p With Aerobatic’s simulator mode, run your front-end changes locally, and the rest of your app in the cloud. Test changes in a fully integrated environment that exactly <b>emulates production</b>. Let stakeholders <b>preview and approve</b> new versions via private URL before flipping the switch to release into the wild.
   
-  section.banner.banner-bottom
-    .container.container-narrow
-      h1 The DevOps you Never Knew You Had
-      h2 Not a huge enterprise? No problem. Deploy to our cloud in less than 60 seconds!
-      h2 CDN, custom domains (inc. SSL), SEO, API proxy, OAuth, and more.
-      a.btn.btn-fancy(title='', href='/docs/getting-started')
-        i.icon-flash
-        | Get Started For Free
-
 

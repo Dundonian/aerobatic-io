@@ -54,26 +54,18 @@ html
             .col-md-9
               .pull-right
                 ul.nav.navbar-nav.pull-right.hidden-sm.hidden-xs
+                  li(ng-click="navCollapsed=true")
+                    a(href="/features") Features
                   li(ng-class="{current:navSelected('/docs')}")
-                    a(href='/docs/introduction')
-                      | Docs
-
+                    a(href='/docs/introduction') Docs
                   li(ng-class="{current:navSelected('/pricing')}")
-                    a(href='/pricing')
-                      | Pricing
-
+                    a(href='/pricing') Pricing 
                   li(ng-class="{current:navSelected('/gallery')}")
-                    a(href='/gallery')
-                      | Gallery
-                  li(ng-class="{current:navSelected('/contact')}")
-                    a(href="/contact")
-                      | Contact
+                    a(href='/gallery') Gallery
                   li(ng-show="mostRecentBlogPost", ng-class="{current:navSelected('/blog')}")
-                    a(ng-href='/blog/{{mostRecentBlogPost}}')
-                      | Blog
+                    a(ng-href='/blog/{{mostRecentBlogPost}}') Blog
                   li
-                    a(href='https://portal.aerobaticapp.com/auth', target="_self")
-                      | Login  
+                    a(href='https://portal.aerobaticapp.com/auth', target="_self") Login
 
                 button.navbar-toggle.hidden-lg.hidden-md.hidden-xl(type='button', ng-init="navCollapsed = true", ng-click="navCollapsed = !navCollapsed")
                   span.sr-only Toggle navigation1
@@ -83,24 +75,17 @@ html
 
       ul.mobile-menu(ng-hide="navCollapsed", ng-cloak)
         li
-          a(href='/docs/introduction', ng-click="navCollapsed=true")
-            | Docs
-        li(ng-click="navCollapsed=true")
-          a(href='/pricing')
-            | Pricing
-        li(ng-click="navCollapsed=true")
-          a(href='/gallery')
-            | Gallery
-        li(ng-click="navCollapsed=true")
-          a(href="/contact")
-            | Contact
-        li(ng-show="mostRecentBlogPost", ng-click="navCollapsed=true")
-          a(ng-href='/blog/{{mostRecentBlogPost}}')
-            | Blog
+          a(href='/docs/introduction', ng-click="navCollapsed=true") Features
         li
-          a(href='https://portal.aerobaticapp.com/auth', target="_self")
-            | Login          
-                
+          a(href='/docs/introduction', ng-click="navCollapsed=true") Docs
+        li(ng-click="navCollapsed=true") 
+          a(href='/pricing') Pricing
+        li(ng-click="navCollapsed=true")
+          a(href='/gallery') Gallery        
+        li(ng-show="mostRecentBlogPost", ng-click="navCollapsed=true")
+          a(ng-href='/blog/{{mostRecentBlogPost}}') Blog
+        li
+          a(href='https://portal.aerobaticapp.com/auth', target="_self") Login                
 
       div(ng-class="{container:showLeftMenu()}")
         .row

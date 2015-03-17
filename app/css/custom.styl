@@ -15,6 +15,7 @@ html
 body
   /* Margin bottom by footer height */
   margin-bottom: 60px;
+  background-color: $secondaryBackground
 
 body
   overflow-x: hidden
@@ -40,6 +41,11 @@ a::-moz-focus-inner
 ::-moz-focus-inner
   border:0
 
+h1, .h1
+  font-family: $primaryHeadingFont !important
+  font-weight: 400 !important
+  font-size: 28px 
+    
 .page.content
   padding-bottom: 20px
   
@@ -233,8 +239,15 @@ a.btn.btn-fancy:hover
     background-position: bottom right
     background-repeat: no-repeat   
 
-
-section.home-features
+section.toolbelt
+  margin-top: 20px
+  
+  h1
+    font-family: $primaryHeadingFont
+    font-size: 28px
+    margin-bottom: 25px  
+  
+section.features
   margin-top: 20px
   
   h2
