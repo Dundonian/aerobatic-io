@@ -32,7 +32,7 @@
         .col-sm-2.col-xs-4
           .logo
             img.img-responsive(asset-src="images/emberjs-logo.png", alt="EmberJS")
-        .clearfix.visible-xs-block.hidden-lg.hidden-md.hidden-sm
+        .clearfix.visible-xs-block.hidden-lg.hidden-md.hidden-sm.break
         .col-sm-2.col-xs-4
           .logo
             img.img-responsive(asset-src="images/npm-logo.png", alt="NPM")
@@ -44,12 +44,21 @@
             img.img-responsive(asset-src="images/grunt-logo.png", alt="Grunt")
   
 
-  section(style="margin: 25px 0 25px 0")
+  section.highlights
     .container.container-narrow
-      i.icon-code(style="font-size:40px; margin-right: 10px")
-      span.h1 Use the Libraries You Love
-      p.lead(style="margin: 15px 0 0 10px") Aerobatic is a platform, not a framework. Build your app with AngularJS, Ember, React, Backbone, jQuery, and whatever next best thing comes along. We're not out to re-invent the wheel, just provide a smoother surface to roll on.
+      .row 
+        .col-md-6
+          i.icon.icon-code
+          span.h1 Use the Libraries You Love
+          p.lead Aerobatic is a platform, not a framework. Build your app with AngularJS, Ember, React, Backbone, jQuery, and whatever next best thing comes along. We're not out to re-invent the wheel, just provide a smoother surface to roll on.
 
+        .col-md-6
+          i.icon.icon-window
+          span.h1 Built for modern web apps
+          p.lead Designed from the ground-up for today's web apps. Everything a front-end developer needs including: command line deployment, API integration and key management, authentication, SEO and more come right out of the box.
+          a.btn.btn-default.btn-fancy.features(ng-href="/features") 
+            i.icon-cog-alt
+            span Features
 
   section.banner.banner-bottom
     .container.container-narrow

@@ -54,7 +54,7 @@ html
             .col-md-9
               .pull-right
                 ul.nav.navbar-nav.pull-right.hidden-sm.hidden-xs
-                  li(ng-click="navCollapsed=true")
+                  li(ng-class="{current:navSelected('/features')}")
                     a(href="/features") Features
                   li(ng-class="{current:navSelected('/docs')}")
                     a(href='/docs/introduction') Docs
@@ -103,14 +103,19 @@ html
       section.footer
         .container
           .row
-            .col-xs-9
+            .col-md-4
               p
                 | Copyright ©&nbsp;
                 script(type='text/javascript').
                   document.write(new Date().getFullYear());
                 a(href='http://www.aerobatic.com') &nbsp;Aerobatic LLC
                 | &nbsp;All rights reserved.
-            .col-xs-3
+            .col-md-4
+              a(ng-href="/contact") 
+                i.icon-bullhorn(style="margin-right:10px")
+                span Contact Us
+
+            .col-md-4
               .pull-right.icons
                 a(href='https://twitter.com/aerobaticapp', title='follow me on Twitter', target='_blank')
                   i.icon-twitter
