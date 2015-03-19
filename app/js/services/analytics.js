@@ -21,7 +21,8 @@ angular.module('services').service('analytics', function($rootScope, $location, 
       // Initialize google analytics tracking
       if (aerobatic.simulator !== true && _.isFunction($window.ga)) {
         try {
-          $window.ga('create', aerobatic.settings.GOOGLE_ANALYTICS_TRACK_CODE, {});
+          // $window.ga('create', aerobatic.settings.GOOGLE_ANALYTICS_TRACK_CODE, {});
+          $window.ga('create', 'UA-48559935-3', {});
         }
         catch (e){}
       }
