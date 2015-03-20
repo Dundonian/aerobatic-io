@@ -184,7 +184,7 @@ a.btn.btn-fancy:hover
   padding-bottom: 25px
   background-color: $primaryBackground
   color: #FFF
-  
+
   a.btn.btn-fancy
     border: solid 2px $accentLightBlue
     background-color: $primaryBackground
@@ -237,9 +237,17 @@ a.btn.btn-fancy:hover
       z-index: 1000
 
 .banner.banner-bottom
-  margin-top: 25px
+  margin-top: 0px
   padding-top: 15px
   padding-bottom: 30px
+
+.banner.quote
+  padding-top: 25px
+  padding-bottom: 25px
+  padding-top: 15px
+  padding-bottom: 30px
+  background-color: $accentLightBlue
+  color: $secondaryBackground
 
 section.highlights 
   margin: 25px 0 25px 0
@@ -474,3 +482,38 @@ a.4front
     
   h2 
     margin-top: 0
+
+
+blockquote.testimonial
+  font-size: 22px;
+  line-height: 22px;
+  margin-bottom: 0;
+  font-weight: 300;
+  font-family: Dosis, sans-serif;
+  padding-left: 0;
+  border: none;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 0.1em;
+
+blockquote.small
+  font-size:50%;
+  display:inline;
+
+blockquote:before
+  content:'\e928';
+  font-family: 'custom-icons';
+  margin-right:0.5em;
+
+blockquote:after
+  content:'\e929';
+  font-family: 'custom-icons';
+  margin-left:0.5em;
+
+blockquote.testimonial.cite
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+ 
+blockquote.testimonial.cite:before
+  content: "\2014 \2009";
