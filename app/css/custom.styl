@@ -20,6 +20,9 @@ body
   font-family: 'Helvetica Neue', sans-serif
   font-size: 15px
 
+blockquote
+  border: none
+  
 @media(min-width:992px)
   body
     /* Margin bottom by footer height */
@@ -483,47 +486,38 @@ a.4front
   h2 
     margin-top: 0
 
+.testimonial
+  blockquote.quote
+    margin: 0
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 0;
+    font-weight: 300;
+    font-family: Dosis, sans-serif;
+    padding-left: 0;
+    border: none !important;
+    border-left-color: transparent
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 0.1em;
+    float: left
 
-blockquote.testimonial
-  font-size: 22px;
-  line-height: 28px;
-  margin-bottom: 0;
-  font-weight: 300;
-  font-family: Dosis, sans-serif;
-  padding-left: 0;
-  border: none;
-  text-transform: uppercase;
-  text-align: left;
-  letter-spacing: 0.1em;
-
-blockquote.testimonial.cite
-  font-size: 16px;
-  display: block;
-  margin-top: 5px;
+  blockquote.cite
+    font-size: 16px;
+    display: block;
+    margin: 5px 0 0;
  
-blockquote.testimonial.cite:before
-  content: "\2014 \2009";
-
-.img-patrik
- float: right;
- width: 80px;
- height: 80px;
- background-image: url('/images/patrik.jpg');
- background-size: cover;
- display: inline-block;
- border-radius: 50%;
- margin-right: 390px;
- margin-top: -40px;
- position: inherit;
-
-.img-pierre
- float: right;
- width: 80px;
- height: 80px;
- background-image: url('/images/pierre.png');
- background-size: cover;
- display: inline-block;
- border-radius: 50%;
- margin-right: 440px;
- margin-top: -20px;
- position: inherit;
+  blockquote.cite:before
+    content: "\2014 \2009";
+  
+// .img-pierre
+//  float: right;
+//  width: 80px;
+//  height: 80px;
+//  background-image: url('/images/pierre.png');
+//  background-size: cover;
+//  display: inline-block;
+//  border-radius: 50%;
+//  margin-right: 440px;
+//  margin-top: -20px;
+//  position: inherit;

@@ -3,7 +3,7 @@ angular.module('services').service('content', function($rootScope, $http, $q, $l
 
   var contentIndexDeferred = $q.defer();
 
-  var gitBranch = 'docs-refactor';
+  var gitBranch = 'master';
   return {
     initialize: function() {
       $log.info("Loading content index from GitHub");

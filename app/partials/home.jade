@@ -60,11 +60,14 @@
             i.icon-cog-alt
             span Features
 
-section.banner.quote
+  section.banner.quote
     .container.container-narrow
-      blockquote.testimonial
-       .icon-quote-left Aerobatic has enabled our front-end team to completely manage their own deployments and eased device testing and previews for both internal and external stakeholders. It has made the workflow less disruptive for the backend team and less stressful for the front-end team.<i class="icon-quote-right"></i>
-       blockquote.testimonial.cite Patrik Kulman, Front-End Developer @ Neovici, Sweden <i class="img-patrik"></i>
+      .row.testimonial
+        .col-md-10.col-sm-8.col-xs-12
+          blockquote.quote <i class="icon-quote-left"></i>Aerobatic has enabled our front-end team to completely manage their own deployments and eased device testing and previews for both internal and external stakeholders. It has made the workflow less disruptive for the backend team and less stressful for the front-end team.<i class="icon-quote-right"></i>
+          blockquote.cite Patrik Kulman, Front-End Developer @ Neovici, Sweden
+        .col-md-2.col-sm-4.xs-hidden
+          img.img-responsive.img-circle(asset-src="images/patrik.jpg")
 
   section.banner.banner-bottom
     .container.container-narrow
@@ -74,5 +77,3 @@ section.banner.quote
       a.btn.btn-fancy(title='', href='/docs/getting-started')
         i.icon-flash
         | Get Started For Free
-
-
