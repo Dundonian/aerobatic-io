@@ -3,62 +3,119 @@
   section.banner.banner-top
     .container.container-narrow
       .row
-        .col-md-6.col-sm-12.col-xs-12
-          h1 Web app deployment for enterprises.
-          h2 Fast &amp; Flexible for Developers. 
-          h2 Secure &amp; Scalable for DevOps.
+        .col-md-8.col-sm-12.col-xs-12
+          h1 Powering the Interface Layer
+          h2 Create and deploy amazing front-end experiences faster than ever with the web application management platform, trusted by businesses worldwide.
           p
           a.btn.btn-fancy(title='', href='/docs/getting-started')
             i.icon-flash
-            | Install Aerobatic
+            | Get Started For Free
           h3
-        .col-md-6.hidden-sm.hidden-xs
+        .col-md-4.hidden-sm.hidden-xs
+          div.pull-right
+              .terminal-bg
+
+  section.benefits
+    .container.container-narrow
+      .row
+       .col-md-12
+         h1 Agile “systems of engagement” without shortcutting operational best practices
+      .row
+        .col-md-4
+          i.icon.icon-code
+          span.h2 Front-End Agility
+          p.lead Deliver proof-of-concept web applications in hours instead of weeks and production-ready systems in days instead of months.
+        .col-md-4
+          i.icon.icon-cloud
+          span.h2 IT Efficiency
+          p.lead Get more from your cloud investment with less dev ops time and resources spent securely provisioning and managing each web application.
+        .col-md-4
+          i.icon.icon-window
+          span.h2 Customer Credibility
+          p.lead Modern, highly-available web applications that perform well on any device, anywhere in the world, from day one. 
+      hr  
+
+  section.how
+    .container.container-narrow
+      .row
+       .col-md-12
+         h1 How Aerobatic Works
+      .row
+        .col-md-3
+          .numberCircle 1
+          span.h2 Create
+          p.lead As an individual, or collaborating as a team, build your web application using your favorite front-end JavaScript frameworks and build tools.
+        .col-md-3
+          .numberCircle 2
+          span.h2 Connect
+          p.lead Securely connect to any backend services via APIs.        
+        .col-md-3
+          .numberCircle 3
+          span.h2 Deploy
+          p.lead From the command line, push your application to dev, test, and production environments.
+        .col-md-3
+          .numberCircle 4
+          span.h2 Manage
+          p.lead Administer your applications from a centralized dashboard or using our API.
+      hr  
+
+  section.tech
+    .container.container-narrow
+      .row
+       .col-md-12
+         h1 Open-Source Technology
+      .row
+        .col-md-12
+          p.lead Aerobatic uses <a href='/docs/getting-started'>4front</a>, the world’s first and only multi-tenant platform-as-a-service built specifically for the unique needs of modern, cloud-native, front-end applications. Built with node.js, the primary contributors to the 4front project have a proven track record of building cloud-native applications that serve up billions of requests to millions of customers monthly. <a href='/docs/getting-started'>Learn More</a>.
+
+      hr  
+
+  section.capabilities
+    .container.container-narrow
+      .row
+       .col-md-12
+         h1 Capabilities
+
+      .row
+        .col-md-6
+          img.img-responsive.terminal(asset-src="images/aws-vpc.png")
+        .col-md-6
+          .h2 Security
+          p With Aerobatic, companies make a one time DevOps investment to get the multi-tenant platform up and running within their AWS VPC. This includes proper SecurityGroup and Subnet controls, IAM role policies, Auto Scaling, log publishing, monitoring, etc. Once installed, your front-end delivery teams are then liberated to deploy new apps at will without having to worry about all the lower level operational concerns.
+
+      .row
+        .col-md-6
+          .h2 Optimized for performance
+          p Application assets are automatically served minified, gzipped, and with aggressive cache headers via a worldwide CDN. Achieve high page speed marks from day one that your users will appreciate.
+        .col-md-6
+          img.img-responsive.terminal(asset-src="images/cdn.png")    
+
+      .row
+        .col-md-6
+              img.img-responsive.terminal(asset-src="images/continuous.png")
+        .col-md-6
+          .h2 Integrated Environments
+          p With Aerobatic’s simulator mode, run your front-end changes locally, and the rest of your app in the cloud. Test changes in a fully integrated environment that exactly emulates production. Let stakeholders preview and approve new versions via private URL before flipping the switch to release into the wild.
+          
+            
+      .row
+        .col-md-6
+          .h2 Developer friendly tooling
+          p Our command line utility integrates cleanly into a streamlined modern workflow. Deploy a new version of an application to production with just a few keystrokes. Wire up to a CI server such as Jenkins for continuous delivery.
+        .col-md-6
           div.pull-right
             .terminal-wrap
               .terminal-bg
               img.img-responsive.terminal(asset-src="images/terminal-combined.png")
 
-
-  section.toolbelt
-    .container.container-narrow
-      h1 Complements the modern front-end toolbelt
-      .row.logos
-        .col-sm-2.col-xs-4
-          .logo
-            img.img-responsive(asset-src="images/angular-logo.png", alt="AngularJS")
-        .col-sm-2.col-xs-4
-          .logo
-            img.img-responsive(asset-src="images/gulp-logo.png", alt="Gulp")
-        .col-sm-2.col-xs-4
-          .logo
-            img.img-responsive(asset-src="images/emberjs-logo.png", alt="EmberJS")
-        .clearfix.visible-xs-block.hidden-lg.hidden-md.hidden-sm.break
-        .col-sm-2.col-xs-4
-          .logo
-            img.img-responsive(asset-src="images/npm-logo.png", alt="NPM")
-        .col-sm-2.col-xs-4
-          .logo
-            img.img-responsive(asset-src="images/react-logo.png", alt="React")
-        .col-sm-2.col-xs-4
-          .logo
-            img.img-responsive(asset-src="images/grunt-logo.png", alt="Grunt")
-  
-
-  section.highlights
-    .container.container-narrow
-      .row 
+      .row
         .col-md-6
-          i.icon.icon-code
-          span.h1 Use the Libraries You Love
-          p.lead Aerobatic is a platform, not a framework. Build your app with AngularJS, Ember, React, Backbone, jQuery, and whatever next best thing comes along. We're not out to re-invent the wheel, just provide a smoother surface to roll on.
-
+          img.img-responsive.terminal(asset-src="images/terminalmock.png")
         .col-md-6
-          i.icon.icon-window
-          span.h1 Built for modern web apps
-          p.lead Designed from the ground-up for today's web apps. Everything a front-end developer needs including: command line deployment, API integration and key management, authentication, SEO and more come right out of the box.
-          a.btn.btn-default.btn-fancy.features(ng-href="/features") 
-            i.icon-cog-alt
-            span Features
+          .h2 Work as a team
+          p Aerobatic Organizations makes it easy for enterprise teams to collaborate and build apps together. Manage all your apps in one place. Share common APIs and configuration across multiple apps.
+      
+      hr  
 
   section.banner.quote
     .container.container-narrow
@@ -71,7 +128,6 @@
 
   section.banner.banner-bottom
     .container.container-narrow
-      h1 The DevOps you Never Knew You Had
       h2 Not a huge enterprise? No problem. Deploy to our cloud in less than 60 seconds!
       h2 CDN, custom domains (inc. SSL), SEO, API proxy, OAuth, and more.
       a.btn.btn-fancy(title='', href='/docs/getting-started')
