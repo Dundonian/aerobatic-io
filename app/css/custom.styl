@@ -5,6 +5,7 @@ $accentLightBlue = rgb(72, 198, 242)
 $secondaryBackground = rgb(248, 248, 248)
 $softBlack = rgb(69, 69, 69)
 $primaryHeadingFont = 'Dosis', sans-serif
+$primaryTextFont = 'Helvetica Neue', sans-serif
 
 html
   position: relative;
@@ -216,8 +217,8 @@ a.btn.btn-fancy:hover
     background-color: $accentLightBlue
     
   div.terminal-wrap
-    width: 400px
-    height: 276px
+    width: 300px
+    height: 208px
     position: relative
     
     div.terminal-bg
@@ -307,9 +308,10 @@ section.benefits
     margin-left: 10px 
 
   p
-    font-family: $primaryHeadingFont
-    font-size: 20px
-    margin-bottom: 25px  
+    font-family: $primaryTextFont
+    font-weight: 100
+    font-size: 18px
+    margin-bottom: 25px 
 
   i.icon
     font-size:40px
@@ -335,13 +337,14 @@ section.how
     display: inline
 
   span.h2
-    margin-left: 15px 
+    margin-left: 15px
 
   p
-    font-family: $primaryHeadingFont
-    font-size: 20px
-    margin-top: 10px
-    margin-bottom: 25px  
+    font-family: $primaryTextFont
+    font-weight: 100
+    font-size: 18px
+    margin-bottom: 25px
+    margin-top: 15px 
 
   i.icon
     font-size:40px
@@ -383,9 +386,10 @@ section.tech
     margin-left: 25px 
 
   p
-    font-family: $primaryHeadingFont
-    font-size: 20px
-    margin-bottom: 25px  
+    font-family: $primaryTextFont
+    font-weight: 100
+    font-size: 18px
+    margin-bottom: 25px 
 
   i.icon
     font-size:40px
@@ -400,7 +404,6 @@ section.capabilities
     font-family: $primaryHeadingFont
     font-size: 32px
     margin-bottom: 25px
-    width: 100%
     text-align: center
     margin 0px auto 25px auto
 
@@ -414,9 +417,10 @@ section.capabilities
     margin-left: 10px 
 
   p
-    font-family: $primaryHeadingFont
-    font-size: 20px
-    margin-bottom: 25px  
+    font-family: $primaryTextFont
+    font-weight: 100
+    font-size: 18px
+    margin-bottom: 25px 
 
   i.icon
     font-size:120px
@@ -425,18 +429,19 @@ section.capabilities
 
   hr
     border-width: 1px
+    border-color: $secondaryBackground
 
   div.terminal-wrap
-    width: 400px
-    height: 276px
+    width: 300px
+    height: 208px
     position: relative
     
     div.terminal-bg
       background-color: $primaryBackground
-      border-radius: 20px 
+      border-radius: 10px 
       z-index: 10
       position: absolute
-      top: 30px
+      top: 20px
       bottom: 0
       left: 0
       right: 0
