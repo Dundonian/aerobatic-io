@@ -45,7 +45,7 @@ html
   body(ng-app='aerobatic-io')
     #appContainer(ng-controller='MainCtrl', ng-cloak)
       //- header
-      header#mainHeader.navbar(role='banner')
+      header#mainHeader.navbar(role='banner').navbar-fixed-top
         .container
           .row
             .col-md-3
@@ -88,7 +88,7 @@ html
           a(href='https://portal.aerobaticapp.com/auth', target="_self") Login                
 
       div(ng-class="{container:showLeftMenu()}")
-        .row
+        .row(style="margin-top:70px")
           .col-md-3.visible-md.visible-lg.left-menu(ng-class="{none:!showLeftMenu()}")
             div.toc(ng-show="showDocsMenu()")
               a(ng-repeat="article in ::contentIndex.docs", ng-href="/docs/{{::article.url}}", ng-class="{active:isActiveToc('/docs/' + article.url)}") {{article.title}}
