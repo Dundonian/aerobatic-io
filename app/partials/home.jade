@@ -4,61 +4,37 @@
     .container.container-narrow
       .row
         .col-md-6.col-sm-12.col-xs-12
-          h1 Web app deployment for enterprises.
-          h2 Fast &amp; Flexible for Developers. 
-          h2 Secure &amp; Scalable for DevOps.
-          p
-          a.btn.btn-fancy(title='', href='/docs/getting-started')
-            i.icon-flash
-            | Install Aerobatic
-          h3
+          h1 Static Hosting for Front-End Developers
+          h2 All of the features. None of the hassles. 
+          h2 Trusted by thousands of developers.
+          h2 CDN, SSL, API Proxy, custom domains, and more.
         .col-md-6.hidden-sm.hidden-xs
           div.pull-right
             .terminal-wrap
               .terminal-bg
               img.img-responsive.terminal(asset-src="images/terminal-combined.png")
-
-
-  section.toolbelt
-    .container.container-narrow
-      h1 Complements the modern front-end toolbelt
-      .row.logos
-        .col-sm-2.col-xs-4
-          .logo
-            img.img-responsive(asset-src="images/angular-logo.png", alt="AngularJS")
-        .col-sm-2.col-xs-4
-          .logo
-            img.img-responsive(asset-src="images/gulp-logo.png", alt="Gulp")
-        .col-sm-2.col-xs-4
-          .logo
-            img.img-responsive(asset-src="images/emberjs-logo.png", alt="EmberJS")
-        .clearfix.visible-xs-block.hidden-lg.hidden-md.hidden-sm.break
-        .col-sm-2.col-xs-4
-          .logo
-            img.img-responsive(asset-src="images/npm-logo.png", alt="NPM")
-        .col-sm-2.col-xs-4
-          .logo
-            img.img-responsive(asset-src="images/react-logo.png", alt="React")
-        .col-sm-2.col-xs-4
-          .logo
-            img.img-responsive(asset-src="images/grunt-logo.png", alt="Grunt")
   
-
   section.highlights
     .container.container-narrow
+      .row
+        .col-md-12.col-md-offset-3
+          h1 Two Options to Deploy Your Apps
       .row 
         .col-md-6
           i.icon.icon-code
-          span.h1 Use the Libraries You Love
-          p.lead Aerobatic is a platform, not a framework. Build your app with AngularJS, Ember, React, Backbone, jQuery, and whatever next best thing comes along. We're not out to re-invent the wheel, just provide a smoother surface to roll on.
+          span.h1 Command Line Deployment
+          p.lead Install the CLI and integrate into your workflow. Deploy with just a few keystrokes. Wire up to your CI server for continuous delivery.
+          a.btn.btn-fancy(title='', href='/docs/getting-started')
+            i.icon-code
+            | Install The CLI
 
         .col-md-6
-          i.icon.icon-window
-          span.h1 Built for modern web apps
-          p.lead Designed from the ground-up for today's web apps. Everything a front-end developer needs including: command line deployment, API integration and key management, authentication, SEO and more come right out of the box.
-          a.btn.btn-default.btn-fancy.features(ng-href="/features") 
-            i.icon-cog-alt
-            span Features
+          i.icon.icon-bitbucket
+          span.h1 Bitbucket Integration
+          p.lead Edit your code, push your changes to Bitbucket, and your site is deployed automatically, all within the Bitbucket UI.
+          a.btn.btn-fancy(title='', href='//bitbucket.aerobatic.com/')
+            i.icon-bitbucket
+            | Install Bitbucket Add-On
 
   section.banner.quote
     .container.container-narrow
@@ -68,12 +44,3 @@
           blockquote.cite Patrik Kullman, Front-End Developer @ Neovici, Sweden
         .col-md-2.col-sm-4.xs-hidden
           img.img-responsive.img-circle(asset-src="images/patrik.jpg")
-
-  section.banner.banner-bottom
-    .container.container-narrow
-      h1 The DevOps you Never Knew You Had
-      h2 Not a huge enterprise? No problem. Deploy to our cloud in less than 60 seconds!
-      h2 CDN, custom domains (inc. SSL), SEO, API proxy, OAuth, and more.
-      a.btn.btn-fancy(title='', href='/docs/getting-started')
-        i.icon-flash
-        | Get Started For Free
